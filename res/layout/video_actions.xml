@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentBottom="true">
+
+    <TextView
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+	    android:background="@drawable/selector_cancel_button"
+        android:gravity="center"
+        style="@style/ButtonText"
+        android:text="Cancel"/>
+	
+	<ImageView
+        android:id="@+id/email_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/cancel_button"
+        android:padding="10dp"
+	    android:background="@drawable/selector_share_video_button"
+	    android:src="@drawable/icon_email"
+        android:gravity="center"
+        android:onClick="share_email"/>
+	
+	<ImageView
+        android:id="@+id/kogeto_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/email_button"
+        android:padding="10dp"
+	    android:background="@drawable/selector_share_video_button"
+	    android:src="@drawable/icon_kogeto"
+        android:gravity="center"
+        android:onClick="share_kogeto"/>
+	
+	<ImageView
+        android:id="@+id/facebook_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/kogeto_button"
+        android:padding="10dp"
+	    android:background="@drawable/selector_share_video_button"
+	    android:src="@drawable/icon_facebook"
+        android:gravity="center"
+        android:onClick="share_facebook"/>
+	
+	<ImageView
+        android:id="@+id/twitter_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/facebook_button"
+        android:padding="10dp"
+	    android:background="@drawable/selector_share_video_button"
+	    android:src="@drawable/icon_twitter"
+        android:gravity="center"
+        android:onClick="share_twitter"/>
+    
+    <TextView
+        android:id="@+id/delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_above="@id/twitter_button"
+	    android:background="@drawable/selector_delete_button"
+        android:gravity="center"
+        style="@style/ButtonText"
+        android:text="Delete"/>
+    
+    <View
+        android:id="@+id/shade"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/delete_button"
+        android:background="#AA000000"
+        android:clickable="true"/>
+    					
+</RelativeLayout>

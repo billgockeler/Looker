@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/gray_10"
+	android:padding="0dp">
+	
+  	<include layout="@layout/actionbar"
+	    android:id="@+id/actionbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentTop="true"/>
+    
+	<FrameLayout
+	    android:id="@+id/thumbnail_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/actionbar">
+		
+		<com.kogeto.looker.widget.AspectImageView
+			android:id="@+id/thumbnail_image"
+		    android:layout_height="wrap_content" 
+		    android:layout_width="match_parent"
+			android:layout_gravity="center"
+			android:padding="5dp"
+		    android:scaleType="fitXY"
+		    android:adjustViewBounds="true"/>
+		<ImageView
+			android:id="@+id/play_image"
+		    android:layout_height="75dp" 
+		    android:layout_width="75dp"
+			android:layout_gravity="center"
+		    android:src="@drawable/selector_play_button"
+		    android:visibility="visible"/>
+	</FrameLayout>	<EditText
+		android:id="@+id/title_edit"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/thumbnail_layout"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:textColor="@color/green_50"
+		android:hint="Title"
+		android:textSize="24sp"
+		android:background="@drawable/selector_edit_text"/>
+	
+	<TextView	
+		android:id="@+id/created_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="10dp"
+		android:textColor="@color/gray_50"
+		android:textSize="20sp"
+		android:text="Posted 1 minute ago"/>
+	
+	<TextView	
+		android:id="@+id/duration_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="5dp"
+		android:layout_above="@id/created_text"
+		android:textColor="@color/gray_90"
+		android:textSize="20sp"
+		android:text="Length 00:00"/>
+	
+	<EditText
+		android:id="@+id/description_edit"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/title_edit"
+		android:layout_above="@id/duration_text"
+		android:layout_marginLeft="5dp"
+		android:layout_marginRight="5dp"
+		android:layout_marginBottom="10dp"
+		android:ellipsize="end"
+		android:textColor="@color/gray_90"
+		android:hint="Description"
+		android:gravity="top"
+		android:textSize="20sp"
+		android:background="@drawable/selector_edit_text"/>
+
+	<include layout="@layout/video_actions"
+	    android:id="@+id/video_actions"
+		android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_alignParentBottom="true"
+	    android:visibility="gone"/>
+		
+			
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<include layout="@layout/actionbar"
+	    android:id="@+id/actionbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentTop="true"/>
+		
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+		android:textColor="@color/gray_90"
+		android:textSize="20sp"
+        android:text="You must register with Kogeto first before sharing on {destination}. If you have already registered please click on Sign-in."
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/firstname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/instruction_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		android:textColor="@color/gray_90"
+		android:textSize="20sp"
+        android:inputType="textPersonName|textCapSentences"
+		android:background="@drawable/selector_edit_text"
+		android:hint="First Name"/>
+
+    <EditText
+        android:id="@+id/lastname_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/firstname_edit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		android:textColor="@color/gray_90"
+		android:textSize="20sp"
+        android:inputType="textPersonName|textCapSentences"
+		android:background="@drawable/selector_edit_text"
+		android:hint="Last Name"/>
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lastname_edit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		android:textColor="@color/gray_90"
+		android:textSize="20sp"
+        android:inputType="textEmailAddress"
+		android:background="@drawable/selector_edit_text"
+		android:hint="Email"/>
+
+    <EditText
+        android:id="@+id/password_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_edit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		android:textColor="@color/gray_90"
+		android:textSize="18sp"
+        android:inputType="textPassword"
+		android:background="@drawable/selector_edit_text"
+		android:hint="Password"/>
+
+    <EditText
+        android:id="@+id/confirm_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_edit"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+		android:textColor="@color/gray_90"
+		android:textSize="18sp"
+        android:inputType="textPassword"
+		android:background="@drawable/selector_edit_text"
+		android:hint="Confirm"/>
+    
+    <TextView
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+	    android:background="@drawable/selector_register_button"
+        android:gravity="center"
+        style="@style/ButtonText"
+        android:text="Register"
+        android:onClick="register"/>
+    
+    
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_camera"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp">
+
+	<com.kogeto.looker.camera.CameraPreview 
+	    android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+	    />
+    
+	<com.kogeto.looker.camera.CalibrateView 
+	    android:id="@+id/calibrate_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+	/>
+	
+	<include layout="@layout/actionbar"
+	    android:id="@+id/actionbar"
+	    android:layout_width="match_parent"
+	    android:layout_height="50dp"
+	    android:layout_alignParentTop="true"/>
+		
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="150dp"
+	    android:layout_alignParentBottom="true"
+	    android:background="@drawable/background_camera_footer">
+	
+	    <ToggleButton
+	        android:id="@+id/calibrate_toggle"
+	        android:layout_width="75dp"
+	        android:layout_height="75dp"
+	        android:layout_centerVertical="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="25dp"
+	        android:textOn=""
+	        android:textOff=""
+	        android:background="@drawable/selector_calibrate_button"/>
+
+	    <TextView 
+	        android:id="@+id/timer"
+	        android:layout_width="125dp"
+	        android:layout_height="50dp"
+	        android:layout_centerInParent="true"
+	        android:gravity="center"
+	        android:textSize="30dp"
+	        android:textColor="@color/gray_90"
+	        android:text="00:00"/>
+	    	     
+		<ToggleButton
+	        android:id="@+id/record_toggle"
+	        android:layout_width="75dp"
+	        android:layout_height="75dp"
+	        android:layout_marginRight="25dp"
+	        android:layout_alignParentRight="true"
+	        android:layout_centerVertical="true"
+	        android:textOn=""
+	        android:textOff=""
+	        android:background="@drawable/selector_record_button"/>
+	     	 
+	</RelativeLayout>
+	
+	<include layout="@layout/camera_settings"
+	    android:id="@+id/settings_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_below="@id/actionbar"
+	    android:visibility="gone"/>
+	
+</RelativeLayout>

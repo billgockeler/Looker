@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/actionbar"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/background_menu_default"
+    android:padding="0dp">
+
+    <TextView
+        android:id="@+id/left_button"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="0dp"
+	    android:background="@drawable/selector_menu_left_button"
+        android:gravity="center"
+        style="@style/MenuText"
+        android:visibility="gone"/>
+
+    <View
+        android:id="@+id/left_border_shadow"
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/left_button"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/green_80"/>
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="11dp"
+        android:src="@drawable/kogeto_logo"/>
+
+    <TextView
+        android:id="@+id/right_button"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_margin="0dp"
+	    android:background="@drawable/selector_menu_right_button"
+        android:gravity="center"
+        style="@style/MenuText"
+        android:visibility="gone"/>
+    
+    <View
+        android:id="@+id/right_border_shadow"
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/right_button"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/green_80"/>
+    
+    <ImageView
+        android:id="@+id/more_button"
+        android:layout_width="75dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:padding="20dp"
+	    android:background="@drawable/selector_menu_left_button"
+	    android:src="@drawable/more_button"
+        android:gravity="center"
+        android:visibility="gone"/>
+    
+    <View
+        android:id="@+id/more_border_highlight"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/more_button"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/green_10"/>
+
+    <View
+        android:id="@+id/more_border_shadow"
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/more_border_highlight"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/green_80"/>
+    
+</RelativeLayout>

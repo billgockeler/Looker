@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/gray_10">
+	<FrameLayout
+	    android:id="@+id/thumbnail_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentLeft="true">
+		<com.kogeto.looker.widget.AspectImageView
+			android:id="@+id/thumbnail_image"
+		    android:layout_height="wrap_content" 
+		    android:layout_width="match_parent"
+			android:layout_gravity="center"
+		    android:padding="5dp"
+		    android:scaleType="fitXY"
+		    android:adjustViewBounds="true"/>
+		<ImageView
+			android:id="@+id/play_image"
+		    android:layout_height="75dp" 
+		    android:layout_width="75dp"
+			android:layout_gravity="center"
+		    android:src="@drawable/selector_play_button"
+		    android:visibility="visible"/>
+	    <ToggleButton
+	        android:id="@+id/delete_toggle"
+	        android:layout_width="75dp"
+	        android:layout_height="75dp"
+	        android:layout_gravity="center"
+	        android:textOn=""
+	        android:textOff=""
+	        android:background="@drawable/selector_delete_toggle"
+		    android:visibility="gone"/>
+    
+	</FrameLayout>	<TextView
+		android:id="@+id/title_text"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/thumbnail_layout"
+		android:layout_marginLeft="5dp"
+		android:textColor="@color/green_50"
+		android:maxLines="1"
+		android:ellipsize="end"
+		android:textSize="24sp"/>
+	<TextView	
+		android:id="@+id/duration_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/title_text"
+		android:layout_marginLeft="5dp"
+		android:textColor="@color/gray_90"
+		android:textSize="17sp"/>
+	<TextView	
+		android:id="@+id/created_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/duration_text"
+		android:layout_alignParentBottom="true"
+		android:layout_marginLeft="5dp"
+		android:paddingBottom="15dp"
+		android:textColor="@color/gray_50"
+		android:textSize="20sp"
+		android:text="Posted 1 minute ago"/>
+</RelativeLayout>
